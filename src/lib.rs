@@ -93,12 +93,13 @@
 #![doc(html_root_url = "https://docs.rs/mio/0.6.14")]
 #![crate_name = "mio"]
 
-#![deny(warnings, missing_docs, missing_debug_implementations)]
+#![deny(missing_docs, missing_debug_implementations)]
 
 extern crate lazycell;
 extern crate net2;
 extern crate iovec;
 extern crate slab;
+extern crate socket2;
 
 #[cfg(target_os = "fuchsia")]
 extern crate fuchsia_zircon as zircon;
@@ -113,9 +114,6 @@ extern crate miow;
 
 #[cfg(windows)]
 extern crate winapi;
-
-#[cfg(windows)]
-extern crate kernel32;
 
 #[macro_use]
 extern crate log;
